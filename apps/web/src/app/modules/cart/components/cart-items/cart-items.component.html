@@ -1,0 +1,13 @@
+<div class="cart-items">
+  <div *ngFor="let item of cartItems" class="cart-item">
+    <div class="item-details">
+      <span class="item-name">{{ item.name }}</span>
+      <span class="item-price">{{ item.price | currency }}</span>
+    </div>
+    <div class="quantity-controls">
+      <button (click)="updateQuantity(item, item.quantity - 1)" [disabled]="item.quantity <= 1">-</button>
+      <input type="number" [(ngModel)]="item.quantity" (change)="updateQuantity(item, item.quantity)" min="1">
+      <button (click)="updateQuantity(item, item.quantity + 1)">+</button>
+    </div>
+  </div>
+</div>

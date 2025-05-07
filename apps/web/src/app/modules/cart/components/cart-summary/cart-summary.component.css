@@ -1,0 +1,31 @@
+.cart-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.summary-item .label {
+  font-weight: bold;
+  color: #333;
+}
+
+.summary-item .value {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.summary-item.total .value {
+  font-size: 1.5rem;
+  color: #000;
+}

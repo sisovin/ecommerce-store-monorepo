@@ -1,0 +1,35 @@
+<form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="street">Street</label>
+    <input id="street" formControlName="street" />
+    <div *ngIf="addressForm.get('street').invalid && addressForm.get('street').touched">
+      <small>Street is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="city">City</label>
+    <input id="city" formControlName="city" />
+    <div *ngIf="addressForm.get('city').invalid && addressForm.get('city').touched">
+      <small>City is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="state">State</label>
+    <input id="state" formControlName="state" />
+    <div *ngIf="addressForm.get('state').invalid && addressForm.get('state').touched">
+      <small>State is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="zip">Zip Code</label>
+    <input id="zip" formControlName="zip" />
+    <div *ngIf="addressForm.get('zip').invalid && addressForm.get('zip').touched">
+      <small>Zip Code is required and must be valid.</small>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="addressForm.invalid">Submit</button>
+</form>
