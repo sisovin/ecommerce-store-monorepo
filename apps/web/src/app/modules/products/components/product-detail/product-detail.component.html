@@ -1,0 +1,14 @@
+<div class="product-detail">
+  <div class="product-images">
+    <ngb-carousel *ngIf="product.images && product.images.length">
+      <ng-template ngbSlide *ngFor="let image of product.images">
+        <img [src]="image.url" alt="{{ product.name }}">
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <div class="product-info">
+    <h1>{{ product.name }}</h1>
+    <p>{{ product.description }}</p>
+    <p>{{ product.price | currency }}</p>
+  </div>
+</div>

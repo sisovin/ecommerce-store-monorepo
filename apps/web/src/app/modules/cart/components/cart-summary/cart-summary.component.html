@@ -1,0 +1,18 @@
+<div class="cart-summary">
+  <div class="summary-item">
+    <span class="label">Subtotal:</span>
+    <span class="value">{{ subtotal | currency }}</span>
+  </div>
+  <div class="summary-item">
+    <span class="label">Tax:</span>
+    <span class="value">{{ tax | currency }}</span>
+  </div>
+  <div class="summary-item">
+    <span class="label">Shipping:</span>
+    <span class="value">{{ shipping | currency }}</span>
+  </div>
+  <div class="summary-item total">
+    <span class="label">Total:</span>
+    <span class="value">{{ total | currency }}</span>
+  </div>
+</div>

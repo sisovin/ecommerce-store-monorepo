@@ -1,0 +1,14 @@
+<div class="review-order">
+  <h2>Review Your Order</h2>
+  <div *ngFor="let item of orderSummary.items" class="order-item">
+    <div class="item-details">
+      <span class="item-name">{{ item.name }}</span>
+      <span class="item-quantity">Quantity: {{ item.quantity }}</span>
+      <span class="item-price">{{ item.price | currency }}</span>
+    </div>
+  </div>
+  <div class="order-total">
+    <span class="label">Total:</span>
+    <span class="value">{{ getTotalPrice() | currency }}</span>
+  </div>
+</div>

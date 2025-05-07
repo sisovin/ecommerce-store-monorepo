@@ -1,0 +1,19 @@
+.payment-method {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.payment-option input[type="radio"] {
+  margin-right: 8px;
+}
+
+.payment-option label {
+  font-weight: bold;
+}

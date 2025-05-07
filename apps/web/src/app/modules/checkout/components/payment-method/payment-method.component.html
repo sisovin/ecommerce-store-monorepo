@@ -1,0 +1,13 @@
+<div class="payment-method">
+  <h2>Select Payment Method</h2>
+  <div *ngFor="let option of paymentOptions" class="payment-option">
+    <input 
+      type="radio" 
+      [value]="option" 
+      name="paymentOption" 
+      (change)="selectPaymentOption(option)" 
+      [checked]="selectedPaymentOption === option"
+    />
+    <label>{{ option }}</label>
+  </div>
+</div>
